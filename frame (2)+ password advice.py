@@ -35,8 +35,8 @@ def compare_passwords():
         #compare each hashed list value with the hashed user password
         if hashed_password == hashed_word:
             #If a match is find, send a message box notifying the user
-             cracked_message = f"Your password '{password} was cracked. \n \n Try to not use complete words," +\
-                               "\n include lower and upper case letters \n and use numbers and symbols"
+             cracked_message = f"Your password '{password}' was cracked. \n \n Try again with a password including: \n -upper and lower case letters" +\
+                               "\n -numbers and symbols \n -no complete words"
              messagebox.showinfo(title="Password was cracked", message=cracked_message)
             #Break the for loop as there's no need to iterate through again
              break
@@ -45,7 +45,7 @@ def compare_passwords():
     else:
         #Notify user the dictionary attack was unsuccessful
          #pop up box which shows invalid login needs to change to password cracker 
-        messagebox.showerror(title="Crack unsuccessful", message="Finding another way..") 
+        messagebox.showerror(title="Crack unsuccessful", message="Your password is safe to use") 
 
 
 #The url leading the to the list of 10,000 words for the dictionary attack
